@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   export.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: siellage <siellage@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tkurukul <thilinaetoro4575@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 15:40:50 by siellage          #+#    #+#             */
-/*   Updated: 2026/01/11 14:30:13 by siellage         ###   ########.fr       */
+/*   Updated: 2026/02/13 18:18:44 by tkurukul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,8 @@ void	doubleexportarg(t_core *core, char *envcmd)
 	if (!envargcontrol(core, envcmd, 1))
 		return ;
 	tempenvname = getenvname(envcmd);
+	if (!tempenvname)
+		return ;
 	arg = envcmd + ft_strlen(tempenvname);
 	isequal = 0;
 	if (*arg == '=')
